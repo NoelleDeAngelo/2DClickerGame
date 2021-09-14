@@ -20,4 +20,10 @@ public class GameManager : MonoBehaviour
       gold+=amount;
       goldText.text = "Gold: "+ gold.ToString();
   }
+
+  public void RemoveGold(int amount)
+  {
+      gold-=amount;
+      goldText.text = "Gold: "+ gold.ToString();
+  }
 }
