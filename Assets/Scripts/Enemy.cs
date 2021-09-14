@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ememy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public Image healthBarFill;
     public int currentHP;
@@ -22,6 +22,7 @@ public class Ememy : MonoBehaviour
 
     public void Defeated()
     {
-
+        EnemyManager.instance.DefeatEnemy(gameObject);
     }
 }
+
