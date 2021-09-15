@@ -9,11 +9,14 @@ public class Enemy : MonoBehaviour
     public int currentHP;
     public int maxHP;
     public int goldToGive;
+    public Animation hitAnim;
 
     public void Damage()
     {
         currentHP --;
         healthBarFill.fillAmount = (float)currentHP / (float)maxHP;
+        hitAnim.Stop();
+        hitAnim.Play();
         if(currentHP <= 0)
         {
             Defeated();
